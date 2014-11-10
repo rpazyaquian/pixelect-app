@@ -10,4 +10,7 @@ var Router = Backbone.Router.extend({
     },
 
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5700a40f68dc63387c6dc64a7cef0375d14b52f9
