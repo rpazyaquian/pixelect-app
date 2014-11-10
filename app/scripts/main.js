@@ -9,7 +9,14 @@ var Router = Backbone.Router.extend({
       'show_album' :"show_album"
     },
 
+    show_album: function(){
+      console.log($('.jumbotron > h1').text())
+
+    }
+
+
 });
+
 
 
 
