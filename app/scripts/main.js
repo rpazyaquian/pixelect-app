@@ -9,9 +9,4 @@ var Router = Backbone.Router.extend({
       'show_album' :"show_album"
     },
 
-    show_album: function(){
-      $('#image1')
-          .attr("src","http://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Shetland_Pony_on_Belstone_Common,_Dartmoor.jpg/1280px-Shetland_Pony_on_Belstone_Common,_Dartmoor.jpg")
-    }
-
 });
