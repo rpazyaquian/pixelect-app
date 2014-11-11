@@ -10,12 +10,12 @@ var Router = Backbone.Router.extend({
       'show_album' :"show_album"
     },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
     show_album: function(){
       console.log($('.jumbotron > h1').text())
 
-    }
+    },
 
 
 
@@ -27,7 +27,7 @@ upload: function(){
   alert('jsworking');
   $('#container').empty();
   console.log('it is working!');
-},
+}
 
 
 // ######################################################
