@@ -17,10 +17,11 @@ var Router = Backbone.Router.extend({
 
     // },
 
-    show_album: function(){
-      console.log($('.jumbotron > h1').text())
+    // show_album: function(){
+    //   "use strict";
+    //   console.log($('.jumbotron > h1').text())
 
-    },
+    // },
 
 
 
@@ -29,13 +30,17 @@ var Router = Backbone.Router.extend({
 // UPLOAD
 
 upload: function(){
-  $('#handlebarsContainer').empty();
+  "use strict";
+  // $('#handlebarsContainer').empty();
   var template = Handlebars.compile($('#uploadTemplate').html());
     $('#handlebarsContainer').html(template({
 
 
     }));
-  alert("upload worked")
+    // console.log($('input[name="uploadedImage"]').val())
+    console.log($('#upImg').val())
+  // alert("upload worked")
+
 
 
 }
