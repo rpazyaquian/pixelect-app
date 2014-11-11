@@ -39,6 +39,22 @@ upload: function(){
     }));
     // console.log($('input[name="uploadedImage"]').val())
     console.log($('#upImg').val())
+    $('#submitupImg').on('click', function(){
+      console.log($('#upImg').val())
+        var imageSet = {
+              image: {
+                file: $('#upImg').val()
+              }
+        }
+
+
+    });
+
+    $.ajax({
+        url: 'https://polar-chamber-4218.herokuapp.com/image_sets',
+        type: 'POST',
+        data:data
+      })
   // alert("upload worked")
 
 
