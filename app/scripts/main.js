@@ -24,9 +24,11 @@ var Router = Backbone.Router.extend({
 // UPLOAD
 
 upload: function(){
-  alert('jsworking');
-  $('#container').empty();
-  console.log('it is working!');
+  var template = Handlebars.compile($().html());
+    $('.container').html(template({
+
+    }));
+
 }
 
 
