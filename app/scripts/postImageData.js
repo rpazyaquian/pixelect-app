@@ -9,6 +9,7 @@ var postImageData = function(formData, key) {
   })
   .done(function(result){
     var imageUrl = 'http://pixelectapp.s3.amazonaws.com/'+key;
-    $('#show-image').attr('src', imageUrl);
+    var imageElement = $('<img>').attr('src', imageUrl);
+    $('#images').append(imageElement);
   });
 };

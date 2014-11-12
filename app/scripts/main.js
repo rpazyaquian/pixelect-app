@@ -2,7 +2,10 @@ $(document).ready(function() {
   $('#imageUpload')
   .submit(function(event) {
     event.preventDefault();
-    var imageFile = $('#image-file')[0].files[0]
-    getImageData(imageFile);
+    var fileInputs = $('#imageUpload > input[type="file"]')
+    for (var i = 0, length = fileInputs.length; i < length; i++) {
+      var imageFile = fileInputs[i].files[0];
+      getImageData(imageFile);
+    }
   });
 });

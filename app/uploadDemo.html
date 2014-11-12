@@ -6,17 +6,13 @@
 </head>
 <body>
 
-  <form id='imageUpload' action="http://pixelectapp.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
-    <input id='acl' type="hidden" name="acl" value="public-read" />
-    <input id='key' type="hidden" name="key" value="" />
-    <input id='accessKey' type="hidden" name="AWSAccessKeyId" value="" />
-    <input id='uploadPolicy' type="hidden" name="Policy" value="POLICY" />
-    <input id='uploadSignature' type="hidden" name="Signature" value="SIGNATURE" />
-    <input type="hidden" id="sas" name="success_action_status" value="sas" />
-    File: <input id='image-file' type="file" name="file" accept="image/*"/> <br />
+  <form id='imageUpload' method="post" enctype="multipart/form-data">
+    Files: <input id='image-1' type="file" name="file1" accept="image/*"/> <br />
+    File: <input id='image-2' type="file" name="file2" accept="image/*"/> <br />
+    File: <input id='image-3' type="file" name="file3" accept="image/*"/> <br />
     <input type="submit" name="submit" id='amazon-upload' value="Upload to Amazon S3" />
   </form>
-  <img id='show-image' src="">
+  <div id="images"></div>
 
   <script src="https://code.jquery.com/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
 
