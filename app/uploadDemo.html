@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+
+  <form id='imageUpload' method="post" enctype="multipart/form-data">
+    Files: <input id='image-1' type="file" name="file1" accept="image/*"/> <br />
+    File: <input id='image-2' type="file" name="file2" accept="image/*"/> <br />
+    File: <input id='image-3' type="file" name="file3" accept="image/*"/> <br />
+    <input type="submit" name="submit" id='amazon-upload' value="Upload to Amazon S3" />
+  </form>
+  <div id="images"></div>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/backbone/backbone.js"></script>
+<script src="bower_components/handlebars/handlebars.js"></script>
+
+<!-- build:js(.) scripts/plugins.js -->
+<script src="bower_components/bootstrap/js/affix.js"></script>
+<script src="bower_components/bootstrap/js/alert.js"></script>
+<script src="bower_components/bootstrap/js/dropdown.js"></script>
+<script src="bower_components/bootstrap/js/tooltip.js"></script>
+<script src="bower_components/bootstrap/js/modal.js"></script>
+<script src="bower_components/bootstrap/js/transition.js"></script>
+<script src="bower_components/bootstrap/js/button.js"></script>
+<script src="bower_components/bootstrap/js/popover.js"></script>
+<script src="bower_components/bootstrap/js/carousel.js"></script>
+<script src="bower_components/bootstrap/js/scrollspy.js"></script>
+<script src="bower_components/bootstrap/js/collapse.js"></script>
+<script src="bower_components/bootstrap/js/tab.js"></script>
+<!--endbuild -->
+
+<!-- build:js({app,.tmp}) scripts/main.js -->
+<script src="scripts/backboneCustom.js"></script>
+<script src="scripts/getImageData.js"></script>
+<script src="scripts/postImageData.js"></script>
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>
