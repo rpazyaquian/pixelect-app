@@ -1,3 +1,4 @@
+
 var Router = Backbone.Router.extend({
     routes:{
       '': "home",
@@ -11,11 +12,22 @@ var Router = Backbone.Router.extend({
 
     // initialize: function(){
 
+
     //   this.bind("all", this.routes)
     //   console.log(this)
 
 
-    // },
+    sign_in: function(){
+      var template = Handlebars.compile($("#sign_inTemplate").html());
+        $('#content').html(template({
+
+        }));
+
+    }
+    // show_album: function(){
+    //   console.log($('.jumbotron > h1').text())
+
+    // // },
 
     // show_album: function(){
     //   "use strict";
@@ -29,37 +41,37 @@ var Router = Backbone.Router.extend({
 // ###################################################
 // UPLOAD
 
-upload: function(){
-  "use strict";
-  // $('#handlebarsContainer').empty();
-  var template = Handlebars.compile($('#uploadTemplate').html());
-    $('#handlebarsContainer').html(template({
+// upload: function(){
+//   "use strict";
+//   // $('#handlebarsContainer').empty();
+//   var template = Handlebars.compile($('#uploadTemplate').html());
+//     $('#handlebarsContainer').html(template({
 
 
-    }));
-    // console.log($('input[name="uploadedImage"]').val())
-    console.log($('#upImg').val())
-    $('#submitupImg').on('click', function(){
-      console.log($('#upImg').val())
-        var imageSet = {
-              image: {
-                file: $('#upImg').val()
-              }
-        }
+//     }));
+//     // console.log($('input[name="uploadedImage"]').val())
+//     console.log($('#upImg').val())
+//     $('#submitupImg').on('click', function(){
+//       console.log($('#upImg').val())
+//         var imageSet = {
+//               image: {
+//                 file: $('#upImg').val()
+//               }
+//         }
 
 
-    });
+//     });
 
-    $.ajax({
-        url: 'https://polar-chamber-4218.herokuapp.com/image_sets',
-        type: 'POST',
-        data:data
-      })
-  // alert("upload worked")
+//     $.ajax({
+//         url: 'https://polar-chamber-4218.herokuapp.com/image_sets',
+//         type: 'POST',
+//         data:data
+//       })
+//   // alert("upload worked")
 
 
 
-}
+// }
 
 
 // ######################################################
@@ -78,3 +90,33 @@ upload: function(){
 
   Backbone.history.start();
 
+
+
+var ImageApp = ImageApp || {}
+
+ImageApp.getAmazonURL = function() {
+  $.ajax({
+    url: 'http://localhost:3000/amazon/sign_key',
+    type: 'GET',
+    data: {file_name: 'url.jpg'},
+  })
+  .done(function(result) {
+    $('#uploadPolicy').val(result.policy);
+    $('#uploadSignature').val(result.signature);
+    $('#accessKey').val(result.access_key);
+    $('#acl').val(result.acl);
+    $('#key').val(result.key);
+  })
+  .fail(function(error) {
+    console.log(error);
+    console.log('error');
+  })
+  .always(function() {
+    console.log("complete");
+  });
+};
+
+
+$(document).ready(function() {
+  ImageApp.getAmazonURL();
+});
