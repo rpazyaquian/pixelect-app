@@ -51,16 +51,24 @@
         </ul>
       </div>
 
+      <div id='post-button'>
+        <a class="btn btn-cta-secondary" href="#/upload" target="_blank">Post!</a>
+      </div>
+
   <div id ="back_bone_templates">
 
     <script id="uploadTemplate" type="text/x-handlebars-template">
+    <div id="upload-form">
       <form  role="form">
         <div class="form-group">
           <form class="form-inline" role="form">
-            <div class="form-group">
-              <label class="sr-only" for="images">Images</label>
-                <input class="form-control" type="file" name="uploadedImage" id="upImg1">
 
+
+            <div class="form-group">
+              <div class="input-group">
+                <label class="sr-only" for="images">Images</label>
+                <input class="form-control" type="file" name="uploadedImage" id="upImg2">
+              </div>
             </div>
             <div class="form-group">
               <div class="input-group">
@@ -77,6 +85,7 @@
         </form>
         </div>
       </form>
+    </div>
     </script>
 
     <script id="sign_inTemplate" type="text/x-handlebars-template">
@@ -116,8 +125,8 @@
           <h2 class="title">Pix<span class="highlight">elect</span></h2>
           <p class="intro">Post, Vote, Discuss!</p>
           <div class="btns">
-              <a class="btn btn-cta-secondary" href="http://themes.3rdwavemedia.com/" target="_blank">Sign-Up</a>
-              <a class="btn btn-cta-primary" href="http://themes.3rdwavemedia.com/website-templates/devaid-free-bootstrap-theme-developers/" target="_blank">Sign-In </a>
+              <a class="btn btn-cta-secondary" href="#/sign_up" target="_blank">Sign-Up</a>
+              <a class="btn btn-cta-primary" href="#/sign_in" target="_blank">Sign-In </a>
           </div>
       </div>
     </section>

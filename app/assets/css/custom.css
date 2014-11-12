@@ -13,3 +13,31 @@
   padding: 0px !important;
 
 }
+input[type="file"]{
+  /*position: relative;*/
+ /* margin-top: 4%;
+  right: 30%;
+  left:60%;*/
+  /*width: 40% ;
+  text-align: center;
+  padding: 3px 8px;*/
+}
+
+#upload-form{
+  text-align: center;
+}
+#upload-form > .form-group{
+  position:relative;
+}
+#post-button{
+
+position: fixed;
+right: 4%;
+}
+#post-button > .btn{
+  font-size: 25px;
+  width: 100px !important;
+  height: 60px !important;
+}
+
+

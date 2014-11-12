@@ -24,22 +24,7 @@ var Router = Backbone.Router.extend({
         }));
 
     },
-    // show_album: function(){
-    //   console.log($('.jumbotron > h1').text())
 
-    // // },
-
-    // show_album: function(){
-    //   "use strict";
-    //   console.log($('.jumbotron > h1').text())
-
-    // },
-
-
-
-
-// ###################################################
-// UPLOAD
 
   upload: function(){
     "use strict";
@@ -82,7 +67,7 @@ var Router = Backbone.Router.extend({
 
 
   var router = new Router();
-
+  Backbone.history = Backbone.history || new Backbone.History({});
   Backbone.history.start();
 
 
