@@ -30,17 +30,26 @@ var Router = Backbone.Router.extend({
       console.log($('#upImg1').val())
       $('#submitupImg').on('click', function(){
 
-        // Test Block<<<<<<<<<<<<<<<<
-        // console.log($('#upImg1').val())
-        // console.log($('#upImg2').val())
-        // console.log($('#upImg3').val())
-        // console.log($('#question').val())
-        // window.location.replace("#/show_album");
-        //Test Block>>>>>>>>>>>>>>>>>>>>
-          // var imageOne = $('#upImg1').val()
-          // var imageTwo = $('#upImg2').val()
-          // var imageThree = $('#upImg3').val()
-          // var arrayOfImages = [imageOne,imageTwo,imageThree]
+
+          $.ajax({
+            url: "https://polar-chamber-4218.herokuapp.com/image_sets",
+            type: "POST",
+            data: {
+             image_set: {
+                question: $('#question').val()
+            }
+        }
+          })
+          .done(function(result){
+            console.log(result.id)
+          });
+
+
+
+          var imageOne = $('#upImg1').val()
+          var imageTwo = $('#upImg2').val()
+          var imageThree = $('#upImg3').val()
+          var arrayOfImages = [imageOne,imageTwo,imageThree]
           // var question = $('#question').val()
           // console.log(arrayOfImages, question)
 
@@ -48,8 +57,14 @@ var Router = Backbone.Router.extend({
           var file = getImageData(arrayOfImages[i])
           console.log(file);
         }
+
+
+
+        $.ajax
+
+
           window.location.replace("#/show_album");
-          }
+
       });
 
       // $.ajax({
@@ -74,10 +89,7 @@ var Router = Backbone.Router.extend({
       url: 'https://polar-chamber-4218.herokuapp.com/image_sets',
       type: 'GET'
     }).done(function(response) {
-          console.log(response.image_sets)
-          console.log(response.image_sets[0])
-          console.log(response.image_sets[0].images)
-          console.log(response.image_sets[0].images[0].url)
+
         });
 
   }
