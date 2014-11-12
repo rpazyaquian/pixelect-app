@@ -6,7 +6,7 @@ var Router = Backbone.Router.extend({
       'sign_in': 'sign_in',
       'upload': 'upload',
       'about': 'about',
-      'show_album' :'show_album'
+      'show_album/:id' :'show_album'
     },
 
     sign_in: function(){
@@ -56,7 +56,7 @@ var Router = Backbone.Router.extend({
           }
           });
 
-          // window.location.replace("#/show_album");
+           window.location.replace("#/show_album/"+image_set_id);
 
       });
 
@@ -73,15 +73,16 @@ var Router = Backbone.Router.extend({
   },
 
 
-  show_album: function(){
+  show_album: function(id){
     var template = Handlebars.compile($('#show_albumTemplate').html());
       $('#handlebarsContainer').html(template({
       }));
 
     $.ajax({
-      url: 'https://polar-chamber-4218.herokuapp.com/image_sets',
+      url: 'https://polar-chamber-4218.herokuapp.com/image_sets/'+id,
       type: 'GET'
     }).done(function(response) {
+      console.table(response)
 
         });
 
