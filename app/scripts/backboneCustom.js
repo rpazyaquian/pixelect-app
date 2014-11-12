@@ -37,18 +37,18 @@ var Router = Backbone.Router.extend({
         // console.log($('#question').val())
         // window.location.replace("#/show_album");
         //Test Block>>>>>>>>>>>>>>>>>>>>
-        var imageOne = $('#upImg1').val()
-        var imageTwo = $('#upImg2').val()
-        var imageThree = $('#upImg3').val()
-        var arrayOfImages = [imageOne,imageTwo,imageThree]
-        var question = $('#question').val()
-          console.log(arrayOfImages, question)
-        window.location.replace("#/show_album");
+          // var imageOne = $('#upImg1').val()
+          // var imageTwo = $('#upImg2').val()
+          // var imageThree = $('#upImg3').val()
+          // var arrayOfImages = [imageOne,imageTwo,imageThree]
+          // var question = $('#question').val()
+          // console.log(arrayOfImages, question)
 
-          var imageSet = {
-                image: {
-                  file: $('#upImg1').val()
-                }
+        for(var i=0; i<arrayOfImages.length; i++){
+          var file = getImageData(arrayOfImages[i])
+          console.log(file);
+        }
+          window.location.replace("#/show_album");
           }
       });
 
