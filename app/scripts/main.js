@@ -60,9 +60,14 @@ var Router = Backbone.Router.extend({
   show_album: function(){
     var template = Handlebars.compile($('#show_albumTemplate').html());
       $('#handlebarsContainer').html(template({
-
-
       }));
+
+    $.ajax({
+      url: 'https://polar-chamber-4218.herokuapp.com/image_sets',
+      type: 'GET'
+    }).done(function(response) {
+          console.log(response)
+        });
 
   }
 
