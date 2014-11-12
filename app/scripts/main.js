@@ -116,12 +116,21 @@ ImageApp.getAmazonURL = function() {
 $(document).ready(function() {
   ImageApp.getAmazonURL();
 
-  $('#amazon-upload').on('click', function(event) {
+  $('#imageUpload')
+  .submit(function(event) {
     event.preventDefault();
-
-    $.post("http://pixelectapp.s3.amazonaws.com/", $("#imageUpload").serialize())
-    .done(function(result){
-      console.log(result);
+    $.ajax({
+      url: 'http://pixelectapp.s3.amazonaws.com/',
+      type: 'POST',
+      data: new FormData(this),
+      processData: false,
+      contentType: false
+    })
+    .done(function(result) {
+      var imageUrl = $(result).find('PostResponse').find('Location').text();
+      renderImage(imageUrl, target);
+      $('#show-image').attr('src', imageUrl);
     });
   });
+
 });
