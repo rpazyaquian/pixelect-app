@@ -101,6 +101,7 @@ ImageApp.getAmazonURL = function() {
     $('#accessKey').val(result.access_key);
     $('#acl').val(result.acl);
     $('#key').val(result.key);
+    $('#sas').val(result.sas);
   })
   .fail(function(error) {
     console.log(error);
