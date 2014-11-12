@@ -9,12 +9,6 @@ var Router = Backbone.Router.extend({
       'show_album' :'show_album'
     },
 
-    // initialize: function(){
-
-
-    //   this.bind("all", this.routes)
-    //   console.log(this)
-
 
     sign_in: function(){
       "use strict";
@@ -76,17 +70,9 @@ var Router = Backbone.Router.extend({
 });
 
 
-// end of backbone
-// #####################################################
-
-
-
-
-
-
-  var router = new Router();
-  Backbone.history = Backbone.history || new Backbone.History({});
-  Backbone.history.start();
+var router = new Router();
+Backbone.history = Backbone.history || new Backbone.History({});
+Backbone.history.start();
 
 
 
