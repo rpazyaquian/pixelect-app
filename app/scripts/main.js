@@ -96,16 +96,12 @@ ImageApp.getAmazonURL = function() {
     data: {file_name: 'url.jpg'},
   })
   .done(function(result) {
-
-    ImageApp.requestPayload = {
-      "Policy": result.policy,
-      "Signature": result.signature,
-      "AWSAccessKeyId": result.access_key,
-      "acl": result.acl,
-      "key": result.key,
-      "success_action_status": result.sas
-    };
-
+    $('#uploadPolicy').val(result.policy),
+    $('#uploadSignature').val(result.signature),
+    $('#accessKey').val(result.access_key),
+    $('#acl').val(result.acl),
+    $('#key').val(result.key),
+    $('#sas').val(result.sas)
   })
   .fail(function(error) {
     console.log(error);
@@ -119,14 +115,13 @@ ImageApp.getAmazonURL = function() {
 
 $(document).ready(function() {
   ImageApp.getAmazonURL();
+
+  $('#amazon-upload').on('click', function(event) {
+    event.preventDefault();
+
+    $.post("http://pixelectapp.s3.amazonaws.com/", $("#imageUpload").serialize())
+    .done(function(result){
+      console.log(result);
+    });
+  });
 });
-
-
-{
-    "Policy": $('#uploadPolicy').val(result.policy),
-    "Signature": $('#uploadSignature').val(result.signature),
-    "AWSAccessKeyId": $('#accessKey').val(result.access_key),
-    "acl": $('#acl').val(result.acl),
-    "key": $('#key').val(result.key),
-    "success_action_status": $('#sas').val(result.sas)
-}
