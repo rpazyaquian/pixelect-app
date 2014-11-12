@@ -50,5 +50,11 @@ right: 4%;
   float: right !important ;
   width:100% !important;
 }
+#back_bone_template{
+  height: 250px;
+  width:300px;
+  background-color: red;
+  border: 2px blue solid;
+}
 
 
