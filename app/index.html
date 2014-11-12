@@ -6,8 +6,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-
-<link rel="shortcut icon" href="favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
@@ -27,28 +25,35 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
+
   <body>
 
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
+  <div class="header">
+    <ul class="nav nav-pills pull-right">
+      <li><a href="#/upload">Upload</a></li>
+      <li><a href="#/about">About</a></li>
+      <li><a href="#/show_album">Show Album</a></li>
+    </ul>
+     <a class="btn btn-cta-secondary" href="#/sign_up" target="_blank">Sign-Up</a>
+     <a class="btn btn-cta-primary" href="#/sign_in" target="_blank">Sign-In </a>
+  </div>
 
-          <li><a href="#/upload">Upload</a></li>
-          <li><a href="#/about">About</a></li>
-          <li><a href="#/show_album">Show Album</a></li>
-
-        </ul>
-      </div>
+  <div id='post-button'>
+    <a class="btn btn-cta-secondary" href="#/upload" target="_blank">Post!</a>
+  </div>
 
   <div id ="back_bone_templates">
 
-    <script id="uploadTemplate" type="text/x-handlebars-template">
+  <script id="uploadTemplate" type="text/x-handlebars-template">
+    <div id="upload-form">
       <form  role="form">
         <div class="form-group">
           <form class="form-inline" role="form">
             <div class="form-group">
-              <label class="sr-only" for="images">Images</label>
+              <div class="input-group">
+                <label class="sr-only" for="images">Images</label>
                 <input class="form-control" type="file" name="uploadedImage" id="upImg1">
-
+              </div>
             </div>
             <div class="form-group">
               <div class="input-group">
@@ -60,11 +65,19 @@
                 <input class="form-control" type="file" name="uploadedImage" id="upImg3">
               </div>
             </div>
-                  <input type="submit" value="Submit" id="submitupImg">
-                  <p class="help-block">Upload your image.</p>
         </form>
         </div>
       </form>
+    </div>
+    <div id="question-form">
+      <form role="form">
+        <div class="form-group">
+          <input type="text" class="form-control" id="question" value="Question">
+        </div>
+      </form>
+    </div>
+    <input type="submit" value="Submit" id="submitupImg">
+    <p class="help-block">Upload your post.</p>
     </script>
 
     <script id="sign_inTemplate" type="text/x-handlebars-template">
@@ -89,12 +102,10 @@
     </script>
 
     <script id="show_albumTemplate" type="text/x-handlebars-template">
-      <div id="image_set">
-      </div>
+        <div id="image-set">
+        </div>
     </script>
-
   </div>
-
 
 
 
@@ -103,10 +114,6 @@
       <div class="container text-center">
           <h2 class="title">Pix<span class="highlight">elect</span></h2>
           <p class="intro">Post, Vote, Discuss!</p>
-          <div class="btns">
-              <a class="btn btn-cta-secondary" href="http://themes.3rdwavemedia.com/" target="_blank">Sign-Up</a>
-              <a class="btn btn-cta-primary" href="http://themes.3rdwavemedia.com/website-templates/devaid-free-bootstrap-theme-developers/" target="_blank">Sign-In </a>
-          </div>
       </div>
     </section>
 </div>
@@ -120,6 +127,25 @@
     <!-- bower:js -->
     <!-- endbower -->
     <!-- endbuild -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -145,10 +171,11 @@
 <!--endbuild -->
 
 <!-- build:js({app,.tmp}) scripts/main.js -->
-<script src="scripts/backboneCustom.js"></script>
+
 <script src="scripts/getImageData.js"></script>
 <script src="scripts/postImageData.js"></script>
-<script src="scripts/main.js"></script>
+<script src="scripts/backboneCustom.js"></script>
+<!-- <script src="scripts/main.js"></script> -->
 <!-- endbuild -->
 </body>
 </html>
