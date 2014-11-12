@@ -66,7 +66,10 @@ var Router = Backbone.Router.extend({
       url: 'https://polar-chamber-4218.herokuapp.com/image_sets',
       type: 'GET'
     }).done(function(response) {
-          console.log(response)
+          console.log(response.image_sets)
+          console.log(response.image_sets[0])
+          console.log(response.image_sets[0].images)
+          console.log(response.image_sets[0].images[0].url)
         });
 
   }
