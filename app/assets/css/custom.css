@@ -37,13 +37,12 @@ right: 4%;
 #post-button > .btn{
   font-size: 25px;
   width: 100px !important;
-  height: 60px !important;
+  height: 50px !important;
 }
 .header .btn{
   display: inline-block;
   position: relative;
-
-  left:1px !important;
+  left: 60% !important;
 
 }
 .pull-right {
@@ -55,6 +54,10 @@ right: 4%;
   width:300px;
   background-color: red;
   border: 2px blue solid;
+}
+
+.navbar-brand{
+  font-size: 45px;
 }
 
 
