@@ -32,12 +32,20 @@ var Router = Backbone.Router.extend({
       console.log($('#upImg1').val())
       $('#submitupImg').on('click', function(){
         // Test Block<<<<<<<<<<<<<<<<
-        console.log($('#upImg1').val())
-        console.log($('#upImg2').val())
-        console.log($('#upImg3').val())
-        console.log($('#question').val())
-        window.location.replace("#/show_album");
+        // console.log($('#upImg1').val())
+        // console.log($('#upImg2').val())
+        // console.log($('#upImg3').val())
+        // console.log($('#question').val())
+        // window.location.replace("#/show_album");
         //Test Block>>>>>>>>>>>>>>>>>>>>
+        var imageOne = $('#upImg1').val()
+        var imageTwo = $('#upImg2').val()
+        var imageThree = $('#upImg3').val()
+        var arrayOfImages = [imageOne,imageTwo,imageThree]
+        var question = $('#question').val()
+          console.log(arrayOfImages, question)
+        window.location.replace("#/show_album");
+
           var imageSet = {
                 image: {
                   file: $('#upImg1').val()
