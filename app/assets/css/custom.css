@@ -39,5 +39,16 @@ right: 4%;
   width: 100px !important;
   height: 60px !important;
 }
+.header .btn{
+  display: inline-block;
+  position: relative;
+  background-color: red;
+  left:1px !important;
+
+}
+.pull-right {
+  float: right !important ;
+  width:100% !important;
+}
 
 
