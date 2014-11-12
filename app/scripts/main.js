@@ -43,38 +43,35 @@ var Router = Backbone.Router.extend({
 // ###################################################
 // UPLOAD
 
-upload: function(){
-  "use strict";
-  // $('#handlebarsContainer').empty();
-  var template = Handlebars.compile($('#uploadTemplate').html());
-    $('#handlebarsContainer').html(template({
+  upload: function(){
+    "use strict";
+    // $('#handlebarsContainer').empty();
+    var template = Handlebars.compile($('#uploadTemplate').html());
+      $('#handlebarsContainer').html(template({
 
 
-    }));
-    // console.log($('input[name="uploadedImage"]').val())
-    console.log($('#upImg1').val())
-    $('#submitupImg').on('click', function(){
+      }));
+      // console.log($('input[name="uploadedImage"]').val())
       console.log($('#upImg1').val())
-        var imageSet = {
-              image: {
-                file: $('#upImg1').val()
-              }
-        }
-    });
+      $('#submitupImg').on('click', function(){
+        console.log($('#upImg1').val())
+          var imageSet = {
+                image: {
+                  file: $('#upImg1').val()
+                }
+          }
+      });
 
-    // $.ajax({
-    //     url: 'https://polar-chamber-4218.herokuapp.com/image_sets',
-    //     type: 'POST',
-    //     data:data
-    //   })
-    //   alert("upload worked")
-
-
-
-}
+      // $.ajax({
+      //     url: 'https://polar-chamber-4218.herokuapp.com/image_sets',
+      //     type: 'POST',
+      //     data:data
+      //   })
+      //   alert("upload worked")
 
 
-// ######################################################
+
+  }
 });
 
 
