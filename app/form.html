@@ -12,9 +12,11 @@
     <input id='accessKey' type="hidden" name="AWSAccessKeyId" value="" />
     <input id='uploadPolicy' type="hidden" name="Policy" value="POLICY" />
     <input id='uploadSignature' type="hidden" name="Signature" value="SIGNATURE" />
-    File: <input type="file" name="file" accept="image/*"/> <br />
-    <input type="submit" name="submit" value="Upload to Amazon S3" />
+    <input type="hidden" id="sas" name="success_action_status" value="sas" />
+    File: <input id='image-file' type="file" name="file" accept="image/*"/> <br />
+    <input type="submit" name="submit" id='amazon-upload' value="Upload to Amazon S3" />
   </form>
+
   <img src="" />
 
   <script src="https://code.jquery.com/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
