@@ -1,41 +1,35 @@
 <!doctype html>
 <html class="no-js">
   <head>
-    <meta charset="utf-8">
+      <meta charset="utf-8">
     <title>pixelect_app</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-
-    <link id="theme-style" rel="stylesheet" href="assets/css/custom.css">
-
-
-    <link rel="shortcut icon" href="/favicon.ico">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+      <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+      <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+      <link id="theme-style" rel="stylesheet" href="assets/css/custom.css">
+      <link rel="shortcut icon" href="/favicon.ico">
+      <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+      <!-- build:css(.) styles/vendor.css -->
+      <!-- bower:css -->
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <!-- endbower -->
+      <!-- endbuild -->
+      <!-- build:css(.tmp) styles/main.css -->
+      <link rel="stylesheet" href="styles/main.css">
+      <!-- endbuild -->
   </head>
 
   <body>
 
   <div class="header">
-    <ul class="nav nav-pills pull-right">
-      <li><a href="#/upload">Upload</a></li>
-      <li><a href="#/about">About</a></li>
-      <li><a href="#/show_album">Show Album</a></li>
-    </ul>
-     <a class="btn btn-cta-secondary" href="#/sign_up" target="_blank">Sign-Up</a>
-     <a class="btn btn-cta-primary" href="#/sign_in" target="_blank">Sign-In </a>
+     <a class="navbar-brand" href="#/home">Pixelect</a>
+     <!-- <a class="navbar-brand" href="#/upload">Upload</a> -->
+     <a class="btn btn-cta-primary" id ="btnup" href="#/sign_up" target="_blank">Sign-Up</a>
+     <a class="btn btn-cta-primary" href="#/upload">Upload</a>
+     <a class="btn btn-cta-primary" href="#/about">About</a>
+     <a class="btn btn-cta-primary" href="#/show_album">Show Album</a>
   </div>
 
   <div id='post-button'>
@@ -102,8 +96,15 @@
     </script>
 
     <script id="show_albumTemplate" type="text/x-handlebars-template">
-        <div id="image-set">
+      <div id="imageset">
+        <div id="firstimg">
         </div>
+        <div id="secontimg">
+        </div>
+        <div id="thirdimg">
+        </div>
+
+      </div>
     </script>
   </div>
 
