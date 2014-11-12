@@ -9,7 +9,6 @@ var Router = Backbone.Router.extend({
       'show_album' :'show_album'
     },
 
-
     sign_in: function(){
       "use strict";
       var template = Handlebars.compile($("#sign_inTemplate").html());
@@ -18,7 +17,6 @@ var Router = Backbone.Router.extend({
         }));
 
     },
-
 
   upload: function(){
     "use strict";
@@ -31,6 +29,7 @@ var Router = Backbone.Router.extend({
       // console.log($('input[name="uploadedImage"]').val())
       console.log($('#upImg1').val())
       $('#submitupImg').on('click', function(){
+
         // Test Block<<<<<<<<<<<<<<<<
         // console.log($('#upImg1').val())
         // console.log($('#upImg2').val())
@@ -62,6 +61,7 @@ var Router = Backbone.Router.extend({
 
 
 
+
   },
 
 
@@ -89,3 +89,4 @@ var Router = Backbone.Router.extend({
 var router = new Router();
 Backbone.history = Backbone.history || new Backbone.History({});
 Backbone.history.start();
+
