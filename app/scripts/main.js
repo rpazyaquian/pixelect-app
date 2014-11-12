@@ -96,11 +96,12 @@ ImageApp.getAmazonURL = function() {
     data: {file_name: 'url.jpg'},
   })
   .done(function(result) {
-    $('#uploadPolicy').val(result.policy);
-    $('#uploadSignature').val(result.signature);
-    $('#accessKey').val(result.access_key);
-    $('#acl').val(result.acl);
-    $('#key').val(result.key);
+    $('#uploadPolicy').val(result.policy),
+    $('#uploadSignature').val(result.signature),
+    $('#accessKey').val(result.access_key),
+    $('#acl').val(result.acl),
+    $('#key').val(result.key),
+    $('#sas').val(result.sas)
   })
   .fail(function(error) {
     console.log(error);
@@ -114,4 +115,22 @@ ImageApp.getAmazonURL = function() {
 
 $(document).ready(function() {
   ImageApp.getAmazonURL();
+
+  $('#imageUpload')
+  .submit(function(event) {
+    event.preventDefault();
+    $.ajax({
+      url: 'http://pixelectapp.s3.amazonaws.com/',
+      type: 'POST',
+      data: new FormData(this),
+      processData: false,
+      contentType: false
+    })
+    .done(function(result) {
+      var imageUrl = $(result).find('PostResponse').find('Location').text();
+      renderImage(imageUrl, target);
+      $('#show-image').attr('src', imageUrl);
+    });
+  });
+
 });
