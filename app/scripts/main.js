@@ -81,13 +81,15 @@ var Router = Backbone.Router.extend({
 
 
 
-  var router = new Router();
+  // var router = new Router();
 
-  Backbone.history.start();
-
+ Backbone.history = Backbone.history || new Backbone.History({});
+ Backbone.history.start();
 
 
 var ImageApp = ImageApp || {}
+ Backbone.history = Backbone.history || new Backbone.History({});
+   Backbone.history.start();
 
 ImageApp.getAmazonURL = function() {
   $.ajax({
