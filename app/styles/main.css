@@ -89,3 +89,6 @@ body {
     border-bottom: 0;
   }
 }
+#handlbarsContainer{
+  margin:0 auto;
+}
