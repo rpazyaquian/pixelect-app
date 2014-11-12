@@ -37,7 +37,13 @@ var Router = Backbone.Router.extend({
       // console.log($('input[name="uploadedImage"]').val())
       console.log($('#upImg1').val())
       $('#submitupImg').on('click', function(){
+        // Test Block<<<<<<<<<<<<<<<<
         console.log($('#upImg1').val())
+        console.log($('#upImg2').val())
+        console.log($('#upImg3').val())
+        console.log($('#question').val())
+        window.location.replace("#/show_album");
+        //Test Block>>>>>>>>>>>>>>>>>>>>
           var imageSet = {
                 image: {
                   file: $('#upImg1').val()
@@ -54,7 +60,19 @@ var Router = Backbone.Router.extend({
 
 
 
+  },
+
+
+  show_album: function(){
+    var template = Handlebars.compile($('#show_albumTemplate').html());
+      $('#handlebarsContainer').html(template({
+
+
+      }));
+
   }
+
+
 });
 
 
