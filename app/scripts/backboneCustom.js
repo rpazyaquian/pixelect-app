@@ -8,19 +8,30 @@ var Router = Backbone.Router.extend({
       'about': 'about',
       'show_album/:id' :'show_album'
     },
+// ############### SIGN IN TEMPLATE ############//
 
-    sign_in: function(){
-      "use strict";
-      var template = Handlebars.compile($("#sign_inTemplate").html());
-        $('#handlebarsContainer').html(template({
+  sign_in: function(){
+    $('#handlebarsContainer').empty();
+    var template = Handlebars.compile($("#sign_inTemplate").html());
+      $('#handlebarsContainer').html(template({
 
-        }));
+      }));
 
-    },
+  },
+// ############### SIGN UP TEMPLATE ############//
+  sign_up: function(){
+    $('#handlebarsContainer').empty();
+    var template = Handlebars.compile($("#sign_upTemplate").html());
+      $('#handlebarsContainer').html(template({
 
+      }));
+
+  },
+// ############### UPLOAD TEMPLATE ############//
   upload: function(){
     $('#handlebarsContainer').empty();
     "use strict";
+
     var template = Handlebars.compile($('#uploadTemplate').html());
       $('#handlebarsContainer').html(template({
 
@@ -75,6 +86,14 @@ var Router = Backbone.Router.extend({
 
   },
 
+// ############### ABOUT TEMPLATE ############//
+  about: function(){
+    $('#handlebarsContainer').empty();
+    var template = Handlebars.compile($('#aboutTemplate').html());
+      $('#handlebarsContainer').html(template({
+      }));
+  },
+
   home: function(){
 
       $.ajax({
@@ -101,27 +120,24 @@ var Router = Backbone.Router.extend({
 
   show_album: function(id){
     $('#handlebarsContainer').empty();
-      $.ajax({
+    $.ajax({
       url: 'https://polar-chamber-4218.herokuapp.com/image_sets/'+id,
       type: 'GET'
     }).done(function(response) {
-
-
 
       console.table(response)
        var template = Handlebars.compile($('#show_albumTemplate').html());
       $('#handlebarsContainer').html(template({
           response: response
 
-
       }));
-        });
+    });
 
 
 
 
   }
-
+// // ############### END OF BACKBONE ############//
 
 });
 
