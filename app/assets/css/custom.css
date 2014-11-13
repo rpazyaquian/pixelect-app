@@ -59,5 +59,12 @@ right: 4%;
 .navbar-brand{
   font-size: 45px;
 }
-
+.thumb{
+  display: inline-block;
+  border: 3px black solid;
+  margin-top:2%;
+}
+.imageset{
+  text-align: center;
+}
 

@@ -96,17 +96,28 @@
     </script>
 
     <script id="show_albumTemplate" type="text/x-handlebars-template">
-      <div id="imageset">
-        <div id="firstimg">
-        </div>
-        <div id="secontimg">
-        </div>
-        <div id="thirdimg">
-        </div>
+
+
+      <div class="imageset">
+
+      {{#each response.images}}
+        <img class="thumb" src={{this.url}}>
+      {{/each}}
+
 
       </div>
     </script>
   </div>
+
+    <script id="homeTemplate" type="text/x-handlebars-template" >
+      {{#each image_sets}}
+        <div class="imageset">
+          {{#each this.images}}
+            <img class="thumb" src={{this.url}}>
+          {{/each}}
+        </div>
+      {{/each}}
+    </script>
 
 
 
