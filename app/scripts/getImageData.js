@@ -1,4 +1,5 @@
-var getImageData = function(imageFile) {
+var getImageData = function(imageFile,image_set_id) {
+  var image_set_id = image_set_id
   $.ajax({
     url: 'https://polar-chamber-4218.herokuapp.com/amazon/sign_key',
     type: 'GET',
@@ -8,6 +9,17 @@ var getImageData = function(imageFile) {
   })
   .done(function(results){
     var imageData = new FormData();
+    var imagePayload = {
+            image: {
+              image_set_id: image_set_id,
+              url: 'http://pixelectapp.s3.amazonaws.com/'+results.key
+            }
+          }
+    $.ajax({
+      url:"https://polar-chamber-4218.herokuapp.com/image_sets/"+image_set_id+'/images',
+      type: 'POST',
+      data: imagePayload
+    });
 
     imageData.append("Policy", results.policy);
     imageData.append("Signature", results.signature);
