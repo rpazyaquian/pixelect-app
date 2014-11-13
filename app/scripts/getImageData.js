@@ -1,4 +1,5 @@
 var getImageData = function(imageFile,image_set_id) {
+  'use strict';
   var image_set_id = image_set_id
   $.ajax({
     url: 'https://polar-chamber-4218.herokuapp.com/amazon/sign_key',

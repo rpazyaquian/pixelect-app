@@ -13,16 +13,16 @@ body{
   line-height:1;
   font-size: 24px;
 }
-
-
-
-
-
+.form-group{
+    margin-top: 15px;
+}
 
 .header{
-  background-color: #2447B2;
   position:absolute;
+  background-color: #074f66;
 }
+
+
 .container .text-center{
   width: 100%;
 }
@@ -30,15 +30,21 @@ body{
   width:100% !important;
   margin-left: 0px !important;
   margin-right: 0px !important;
-
 }
 
-.container{
-  max-width: 800px !important;
+.container {
+  max-width: 100% !important;
   width: 100% !important;
   padding: 0px !important;
-
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px
 }
+
 input[type="file"]{
   /*position: relative;*/
  /* margin-top: 4%;
@@ -48,6 +54,7 @@ input[type="file"]{
   text-align: center;
   padding: 3px 8px;*/
 }
+
 .form-control {
   display: block;
   margin-left: 25%;
@@ -104,7 +111,7 @@ right: 4%;
   /*display: inline-block;*/
   position: relative;
   left: 40% !important;
-
+  color:white;
 }
 .pull-right {
   float: right !important ;
@@ -119,23 +126,24 @@ right: 4%;
 
 .navbar-brand{
   font-size: 45px;
-}
-.thumb{
-  display: inline-block;
-  border: 3px black solid;
-  margin-top:2%;
-}
-.imageset{
-  text-align: center;
-}
-
-.navbar-brand {
+  color:white;
   float: left;
   height: 50px;
   padding: 15px 15px 15px 10%;
   font-size: 48px;
   line-height: 20px;
 }
+.thumb{
+  display: inline-block;
+  border: 3px black solid;
+  margin-top:2%;
+  width:100%;
+  max-width:250px;
+}
+.imageset{
+  text-align: center;
+}
+
 .btn {
   display: inline-block;
   padding: 6px 12px;
@@ -164,5 +172,17 @@ right: 4%;
   border-top: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+}
+
+.footer{
+  /*display: inline-block;*/
+  /*vertical-align: baseline;*/
+  text-align: center;
+  background-color:#074f66;
+}
+
+
+.form101{
+  margin-left: 25%;
 }
 
