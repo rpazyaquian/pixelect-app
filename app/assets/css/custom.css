@@ -1,3 +1,11 @@
+body{
+
+}
+
+.header{
+  background-color: #2447B2;
+  position:absolute;
+}
 .container .text-center{
   width: 100%;
 }
@@ -7,6 +15,7 @@
   margin-right: 0px !important;
 
 }
+
 .container{
   max-width: 800px !important;
   width: 100% !important;
@@ -21,6 +30,25 @@ input[type="file"]{
   /*width: 40% ;
   text-align: center;
   padding: 3px 8px;*/
+}
+.form-control {
+  display: block;
+  margin-left: 25%;
+  width: 50%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
 #upload-form{
@@ -56,9 +84,9 @@ right: 4%;
   height: 50px !important;
 }
 .header .btn{
-  display: inline-block;
+  /*display: inline-block;*/
   position: relative;
-  left: 60% !important;
+  left: 40% !important;
 
 }
 .pull-right {
@@ -83,3 +111,41 @@ right: 4%;
 .imageset{
   text-align: center;
 }
+
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 15px 15px 15px 10%;
+  font-size: 48px;
+  line-height: 20px;
+}
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.navbar-collapse {
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+}
+
