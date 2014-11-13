@@ -8,19 +8,29 @@ var Router = Backbone.Router.extend({
       'about': 'about',
       'show_album' :'show_album'
     },
+// ############### SIGN IN TEMPLATE ############//
 
-    sign_in: function(){
-      "use strict";
-      var template = Handlebars.compile($("#sign_inTemplate").html());
-        $('#handlebarsContainer').html(template({
+  sign_in: function(){
+    $('#handlebarsContainer').empty();
+    var template = Handlebars.compile($("#sign_inTemplate").html());
+      $('#handlebarsContainer').html(template({
 
-        }));
+      }));
 
-    },
+  },
+// ############### SIGN UP TEMPLATE ############//
+  sign_up: function(){
+    $('#handlebarsContainer').empty();
+    var template = Handlebars.compile($("#sign_upTemplate").html());
+      $('#handlebarsContainer').html(template({
 
+      }));
+
+  },
+// ############### UPLOAD TEMPLATE ############//
   upload: function(){
     "use strict";
-    // $('#handlebarsContainer').empty();
+    $('#handlebarsContainer').empty();
     var template = Handlebars.compile($('#uploadTemplate').html());
       $('#handlebarsContainer').html(template({
 
@@ -79,8 +89,17 @@ var Router = Backbone.Router.extend({
 
   },
 
+// ############### ABOUT TEMPLATE ############//
+  about: function(){
+    $('#handlebarsContainer').empty();
+    var template = Handlebars.compile($('#aboutTemplate').html());
+      $('#handlebarsContainer').html(template({
+      }));
 
+  },
+// ###############SHOW_ALBUM TEMPLATE ############//
   show_album: function(){
+    $('#handlebarsContainer').empty();
     var template = Handlebars.compile($('#show_albumTemplate').html());
       $('#handlebarsContainer').html(template({
       }));
@@ -93,7 +112,7 @@ var Router = Backbone.Router.extend({
         });
 
   }
-
+// // ############### END OF BACKBONE ############//
 
 });
 
