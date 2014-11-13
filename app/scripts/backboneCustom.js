@@ -81,28 +81,16 @@ var Router = Backbone.Router.extend({
         url: 'https://polar-chamber-4218.herokuapp.com/image_sets'
 
       }).done(function(response){
-
+        console.log(response)
         var template = Handlebars.compile($('#homeTemplate').html());
       $('#handlebarsContainer').html(template({
         image_sets: response.image_sets
 
       }));
-        // console.table(image_sets)
-        // console.table(image_sets[0])
-        // console.table(image_sets[0].images)
-        // var individualImages = image_sets[0].images
 
-        // for(var i=0; i<image_sets.length; i++){
-        //   var images = image_sets[i].images
-
-        //   // $('<img>').attr('src', image_sets[i].images)
-        //   for(var q=0; q<images.length; q++){
-        //     var imgUrl = images[q].url
-        //     $('<img>').attr('src',imgUrl).appendTo('#imageset')
-        //   }
-
-        // }
-
+        $('#homeButton').on('click', function(){
+          console.log(this.html())
+        });
 
 
       });
