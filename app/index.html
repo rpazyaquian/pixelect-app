@@ -76,7 +76,10 @@
            <input type="email" class="form-control" placeholder="Enter email">
           <label for="password" class = "form101"> Password </label>
            <input type="password" class="form-control" id="password" placeholder="Password"><br/>
-          <br/><center>
+          <center>
+          <label>
+            <input type="checkbox"> Remember me
+          </label><br/>
           <input type="submit" class="btn btn-primary" value="Log In"></center>
         </div>
       </form>
@@ -120,8 +123,10 @@
             <button id="homeButton" type="button"><img class="thumb" src={{this.url}} id={{this.id}} ></button>
           {{/each}}
           <p class="textq">{{this.question}}</p>
+
         </div>
       {{/each}}
+
     </script>
 
 <div class="container">
