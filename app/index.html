@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
       <meta charset="utf-8">
-    <title>pixelect_app</title>
+    <title>Pixelect</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width">
       <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
@@ -29,94 +29,77 @@
      </div>
      <div class="collapse navbar-collapse">
        <ul class="btn nav navbar-nav">
-         <li><a href="#/upload">POST</a></li>
-         <li><a href="#/sign_up">Sign Up</a></li>
-         <li><a href="#/sign_up">Sign In</a></li>
-         <li><a href="#/about">About</a></li>
+         <li><a class="btn" href="#/upload">POST</a></li>
+         <li><a class="btn"href="#/sign_up">Sign Up</a></li>
+         <li><a class="btn"href="#/sign_in">Sign In</a></li>
+         <li><a class="btn"href="#/about">About</a></li>
        </ul>
      </div>
   </div>
 
-<!--
-  <div id='post-button'>
-    <a class="btn btn-cta-secondary" href="#/upload">Post!</a>
-  </div> -->
 
   <div id ="back_bone_templates">
 <!--###################### Upload template  ################# -->
     <script id="uploadTemplate" type="text/x-handlebars-template">
-      <form role="form">
+    <form>
+
+      <div class="form-group">
+        <label class="sr-only" for="images">Images</label>
+        <input class="form-control" type="file" name="uploadedImage" id="upImg1">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="file" name="uploadedImage" id="upImg2">
+      </div>
+      <div class="form-group">
+      <input class="form-control" type="file" name="uploadedImage" id="upImg3">
+      </div>
+
+      <div id="question-form" >
+        <div class="form-group">
+        <input type="text" class="form-control" id="question" value="Enter your question here!">
+      </div>
+
+    <div><center>
+      <input class="btn btn-primary"type="submit" value="Submit" id="submitupImg">
+      <p class="help-block">Upload your post.</p>
+    </center></div>
+
+    </form>
 
 
+    <div><center>
 
-        <div class="form-control">
-          <label for="email">Email address</label>
-           <input type="email" class="form-control" placeholder="Enter email">
-          <label for="password"> Password </label>
-           <input type="password" class="form-control" id="password" placeholder="Password"><br/>
-          <input type="submit" class="btn btn-primary" value="Log In">
-        </div>
-
-
-
-              //   <form  role="form">
-              //     <div class="form-group">
-              //       <form class="form-inline" role="form">
-              //         <div class="form-group">
-              //           <div class="input-group">
-              //             <label class="sr-only" for="images">Images</label>
-              //             <input class="form-control" type="file" name="uploadedImage" id="upImg1">
-              //           </div>
-              //         </div>
-              //         <div class="form-group">
-              //           <div class="input-group">
-              //             <input class="form-control" type="file" name="uploadedImage" id="upImg2">
-              //           </div>
-              //         </div>
-              //         <div class="form-group">
-              //           <div class="input-group">
-              //             <input class="form-control" type="file" name="uploadedImage" id="upImg3">
-              //           </div>
-              //         </div>
-              //     </div>
-              //   </form>
-              // </div>
-              // <div id="question-form">
-              //   <form role="form">
-              //     <div class="form-group">
-              //       <input type="text" class="form-control" id="question">
-              //     </div>
-              //   </form>
-              // </div>
-              // <input type="submit" value="Submit" id="submitupImg">
-              // <p class="help-block">Upload your post.</p>
-      </form>
     </script>
 
 <!--###################### Sign in template  ################# -->
     <script id="sign_inTemplate" type="text/x-handlebars-template">
-      <form role="form">
-        <div class="form-control">
-          <label for="email">Email address</label>
+      <form >
+        <div class="form-group">
+          <label for="email" class = "form101">Email address</label>
            <input type="email" class="form-control" placeholder="Enter email">
-          <label for="password"> Password </label>
+          <label for="password" class = "form101"> Password </label>
            <input type="password" class="form-control" id="password" placeholder="Password"><br/>
-          <input type="submit" class="btn btn-primary" value="Log In">
+          <center>
+          <label>
+            <input type="checkbox"> Remember me
+          </label><br/>
+          <input type="submit" class="btn btn-primary" value="Log In"></center>
         </div>
       </form>
     </script>
 
 <!--###################### Sign up template  ################# -->
     <script id="sign_upTemplate" type="text/x-handlebars-template">
-      <form role="form">
-        <div class="form-control">
-          <label for="email">Email address</label>
+
+      <form >
+        <div class="form-group">
+          <label for="email" class = "form101">Email address</label>
            <input type="email" class="form-control" placeholder="Enter email">
-          <label for="password"> Password </label>
+          <label for="password" class = "form101"> Password </label>
            <input type="password" class="form-control" id="password" placeholder="Password"><br/>
-          <label for="passwordconf"> Password Confirmation </label>
-           <input type="password" class="form-control" id="password" placeholder="Re-enter your password"><br/>
-          <input type="submit" class="btn btn-primary" value="Log In">
+          <label for="passwordconf" class = "form101"> Password Confirmation </label>
+           <input type="password" class="form-control" id="password" placeholder="Re-enter your password"><br/><center>
+          <input type="submit" class="btn btn-primary" value="Log In"></center>
         </div>
       </form>
 
@@ -125,24 +108,25 @@
 <!--###################### Show Album template  ################# -->
     <script id="show_albumTemplate" type="text/x-handlebars-template">
 
-
       <div class="imageset">
 
       {{#each response.images}}
         <img class="thumb" src={{this.url}}>
       {{/each}}
-
+      <p class="textq">{{response.question}}</p>
 
       </div>
     </script>
-  </div>
 
+<!--###################### HOME template  ################# -->
     <script id="homeTemplate" type="text/x-handlebars-template" >
       {{#each image_sets}}
         <div class="imageset">
+          <p class="textq">{{this.question}}</p>
           {{#each this.images}}
             <button id="homeButton" type="button"><img class="thumb" src={{this.url}} id={{this.id}} ></button>
           {{/each}}
+
         </div>
       {{/each}}
     </script>
@@ -153,38 +137,22 @@
           <h2 class="title">Pix<span class="highlight">elect</span></h2>
           <p class="intro">Post, Vote, Discuss!</p>
       </div>
-    </section>
+  </section>
 </div>
-
 
 <div id="handlebarsContainer"></div>
 
 
+<div class=footer>
+  <p>Posted by: The World's Most Bestest Web Devs!</p>
+  <p>Contact information: <a href="mailto:woldsmostbestestwebdevs@email.com">
+  woldsmostbestestwebdevs@email.com</a>.</p>
+</div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- endbower -->
     <!-- endbuild -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
@@ -215,5 +183,7 @@
 <script src="scripts/backboneCustom.js"></script>
 <!-- <script src="scripts/main.js"></script> -->
 <!-- endbuild -->
+
 </body>
+
 </html>
