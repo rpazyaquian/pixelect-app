@@ -1,20 +1,187 @@
-#page{
-  border: 2px blue solid;
-  height: 300px;
 
+.textq{
+  font-weight:normal;
+  color:#000000;
+  letter-spacing:1pt;
+  word-spacing:2pt;
+  font-size:12px;
+  text-align:center;
+  font-family:tahoma, verdana, arial, sans-serif;
+  line-height:1;
+  font-size: 24px;
 }
-.btn{
-  margin: 2px;
+.form-group{
+    margin-top: 15px;
 }
-.pull-right{
+
+.header{
+  position:absolute;
+  background-color: #074f66;
+}
+
+
+.container .text-center{
+  width: 100%;
+}
+.promo{
+  width:100% !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.container {
+  max-width: 100% !important;
   width: 100% !important;
-  float: right !important;
+  padding: 0px !important;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px
 }
 
-.usrbtn{
-  color: right;
+input[type="file"]{
+  /*position: relative;*/
+ /* margin-top: 4%;
+  right: 30%;
+  left:60%;*/
+  /*width: 40% ;
+  text-align: center;
+  padding: 3px 8px;*/
 }
 
-.btnup{
-  color:red;
+.form-control {
+  display: block;
+  margin-left: 25%;
+  width: 50%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+
+#upload-form{
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+#upload-form > .form-group{
+  position:relative;
+}
+#post-button{
+
+position: fixed;
+right: 4%;
+}
+#post-button > .btn{
+  font-size: 25px;
+  width: 100px !important;
+  height: 50px !important;
+}
+.header .btn{
+  /*display: inline-block;*/
+  position: relative;
+  left: 40% !important;
+  color:white;
+}
+.pull-right {
+  float: right !important ;
+  width:100% !important;
+}
+#back_bone_template{
+  height: 250px;
+  width:300px;
+  background-color: red;
+  border: 2px blue solid;
+}
+
+.navbar-brand{
+  font-size: 45px;
+  color:white;
+  float: left;
+  height: 50px;
+  padding: 15px 15px 15px 10%;
+  font-size: 48px;
+  line-height: 20px;
+}
+
+.thumb{
+  display: inline-block;
+  border: 3px black solid;
+  margin-top:2%;
+  width:100%;
+  max-width:250px;
+}
+
+.imageset{
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.navbar-collapse {
+  padding-right: 15px;
+  padding-left: 15px;
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+}
+
+.footer{
+  /*display: inline-block;*/
+  /*vertical-align: baseline;*/
+  text-align: center;
+  background-color:#074f66;
+}
+
+
+.form101{
+  margin-left: 25%;
+}
+
