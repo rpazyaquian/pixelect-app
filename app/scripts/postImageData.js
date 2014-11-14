@@ -1,6 +1,5 @@
 var postImageData = function(formData, key) {
   // post the form data
-  'use strict';
   $.ajax({
     url: 'http://pixelectapp.s3.amazonaws.com/',
     type: 'POST',

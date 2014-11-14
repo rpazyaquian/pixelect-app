@@ -39,7 +39,8 @@ var Router = Backbone.Router.extend({
 
       // console.log($('input[name="uploadedImage"]').val())
       console.log($('#upImg1').val())
-      $('#submitupImg').on('click', function(){
+      $('#submitupImg').on('click', function(event){
+          event.preventDefault();
           var image_set_id = 0;
 
           $.ajax({

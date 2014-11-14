@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
       <meta charset="utf-8">
-    <title>pixelect_app</title>
+    <title>Pixelect</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width">
       <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
@@ -59,12 +59,15 @@
         <input type="text" class="form-control" id="question" value="Enter your question here!">
       </div>
 
-    </form>
-
     <div><center>
       <input class="btn btn-primary"type="submit" value="Submit" id="submitupImg">
-      <p class="help-block">Upload your post.</p></center>
-    </div>
+      <p class="help-block">Upload your post.</p>
+    </center></div>
+
+    </form>
+
+
+    <div><center>
 
     </script>
 
@@ -119,14 +122,13 @@
     <script id="homeTemplate" type="text/x-handlebars-template" >
       {{#each image_sets}}
         <div class="imageset">
+          <p class="textq">{{this.question}}</p>
           {{#each this.images}}
             <button id="homeButton" type="button"><img class="thumb" src={{this.url}} id={{this.id}} ></button>
           {{/each}}
-          <p class="textq">{{this.question}}</p>
 
         </div>
       {{/each}}
-
     </script>
 
 <div class="container">
@@ -147,13 +149,10 @@
   woldsmostbestestwebdevs@email.com</a>.</p>
 </div>
 
-
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- endbower -->
     <!-- endbuild -->
-
 
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
